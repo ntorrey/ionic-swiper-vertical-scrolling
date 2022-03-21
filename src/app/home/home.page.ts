@@ -12,4 +12,7 @@ export class HomePage {
 
   constructor() {}
 
+  mousedown() {
+    console.log('mousedown')
+  }
 }

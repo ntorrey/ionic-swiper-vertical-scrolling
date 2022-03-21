@@ -10,8 +10,16 @@
   <swiper>
     <ng-template swiperSlide>
       <ion-list>
-        <ion-item button>
-          <ion-label>This item has the button attribute applied</ion-label>
+        <ion-item (mousedown)="mousedown()">
+          <ion-label>This item has the button attribute applied but the mousedown event is not detected. Open the console to see 'mousedown' logged on mousedown events. (you shouldn't see any mousedown events logged). Slide to the right to show an ion-item with a checkbox which behaves differently.</ion-label>
+        </ion-item>
+      </ion-list>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-list>
+        <ion-item (mousedown)="mousedown()">
+          <div>This item has checkbox, but no button attribute applied. Somehow it will show the ripple when clicked in a desktop environment. It is somehow detecting mousedown events.</div>
+          <ion-checkbox></ion-checkbox>
         </ion-item>
       </ion-list>
     </ng-template>
